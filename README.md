@@ -11,6 +11,7 @@ The Student Management System is a web application designed to manage student in
 - **Modify Student Information**: Update existing student information as needed.
 - **Verify Students**: Check student details and ensure data accuracy.
 - **Manage Courses**: Add, delete, or modify courses associated with students.
+- **search for student by id** : you can use his id to search for a specific student 
 
 ## Technologies Used
 
