@@ -46,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $stmt->close();
 }
 
-// Search for a student by ID
+// look for  student by ID
 $search_result = null;
 if (isset($_GET['search_id'])) {
     $search_id = $_GET['search_id'];
@@ -57,7 +57,7 @@ if (isset($_GET['search_id'])) {
     $stmt->close();
 }
 
-// Fetch all students
+// fetching all students
 $sql = "SELECT * FROM students";
 $result = $conn->query($sql);
 ?>
