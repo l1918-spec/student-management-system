@@ -6,12 +6,10 @@ $pass = '';
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-// Check for connection errors
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Handle form submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // Retrieve and sanitize input data
     $name = $conn->real_escape_string($_POST['name']);
@@ -23,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $study_days = $conn->real_escape_string($_POST['study_days']);
     $program = $conn->real_escape_string($_POST['program']);
 
-    // Insert data into the database
+    // we insert data into the database
     $sql = "INSERT INTO students (name, surname, age, address, school_year, class, study_days, program)
             VALUES ('$name', '$surname', $age, '$address', '$school_year', '$class', '$study_days', '$program')";
 
@@ -44,7 +42,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration</title>
-    <!-- Bootstrap CDN -->
+    <!-- using bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
     body {
@@ -127,7 +125,7 @@ $conn->close();
 <body>
     <div class="container">
         <h2>Student Registration</h2>
-        <!-- Student Registration Form -->
+        <!-- the student regist form -->
         <form method="POST" action="">
             <div class="row">
                 <div class="col-md-6 mb-3">
@@ -179,7 +177,6 @@ $conn->close();
         </form>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
