@@ -2,7 +2,7 @@
 
 ## Overview
 
-The Student Management System is a web application designed to manage student information effectively. This application allows users to add, delete, modify, and verify students and their associated courses, class numbers, and other relevant information. It is built using PHP for the backend, MySQL for the database, and Bootstrap for responsive front-end design.
+a very simple Student Management System web application designed to manage student information effectively. This application allows users to add, delete, modify, and verify students and their associated courses, class numbers, and other relevant information. It is built using PHP for the backend, MySQL for the database, and Bootstrap for responsive front-end design.
 
 ## Features
 
