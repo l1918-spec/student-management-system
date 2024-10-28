@@ -9,14 +9,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// Retrieve student ID from the URL
+// retrieve student ID from the URL
 $student_id = $_GET['id'];
 
-// Fetch student details
+// retching student details
 $sql = "SELECT * FROM students WHERE student_id = '$student_id'";
 $result = $conn->query($sql);
 
-// Fetch student courses
+// fetch student courses
 $course_sql = "SELECT c.course_name FROM courses c 
                JOIN student_courses sc ON c.course_id = sc.course_id 
                WHERE sc.student_id = '$student_id'";
@@ -111,7 +111,6 @@ $course_result = $conn->query($course_sql);
         </div>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
