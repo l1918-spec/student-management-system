@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
     }
 }
 
-// Update student information
+// updating students informations incase of errors or anything
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $student_id = $_POST['student_id'];
     $name = $_POST['name'];
